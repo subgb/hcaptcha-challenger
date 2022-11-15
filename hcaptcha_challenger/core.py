@@ -654,6 +654,8 @@ class HolyChallenger:
             for index in range(3):
                 # [👻] 進入挑戰框架
                 self.switch_to_challenge_frame(ctx)
+                ctx.execute_script('document.styleSheets[0].insertRule(".task-image[aria-pressed=true] { outline: 6px solid red !important }", 0 )')
+                ctx.execute_script('document.styleSheets[0].insertRule(".task-image .border { display:none }", 0 )')
 
                 # [👻] 獲取挑戰標簽
                 if drop := self.get_label(ctx) in [self.CHALLENGE_BACKCALL]:

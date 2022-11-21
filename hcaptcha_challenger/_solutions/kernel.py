@@ -81,7 +81,7 @@ class Memory:
 
 
 class Assets:
-    GITHUB_RELEASE_API = "https://api.github.com/repos/qin2dim/hcaptcha-challenger/releases"
+    GITHUB_RELEASE_API = "https://api.github.com/repos/rofaya/hcaptcha-challenger/releases"
 
     NAME_ASSETS = "assets"
     NAME_ASSET_NAME = "name"
@@ -176,7 +176,7 @@ class Assets:
 
 class PluggableObjects:
     URL_REMOTE_OBJECTS = (
-        "https://raw.githubusercontent.com/QIN2DIM/hcaptcha-challenger/main/src/objects.yaml"
+        "https://raw.githubusercontent.com/rofaya/hcaptcha-challenger/main/src/objects.yaml"
     )
 
     def __init__(self, path_objects: str):

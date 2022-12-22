@@ -124,6 +124,7 @@ class Scaffold:
 
 
 def get_challenge_ctx(
+    proxy: typing.Optional[str] = None,
     silence: typing.Optional[bool] = None, lang: typing.Optional[str] = None, **kwargs
 ):
     """
@@ -141,6 +142,9 @@ def get_challenge_ctx(
     options = uc.ChromeOptions()
     options.add_argument("--log-level=3")
     options.add_argument("--disable-dev-shm-usage")
+
+    if proxy is not None:
+        options.add_argument(f"--proxy-server={proxy}")
 
     # - Restrict the language of hCaptcha label
     # - Environment variables are valid only in the current process
